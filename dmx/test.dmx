@@ -1,0 +1,69 @@
+#
+# DMX test script
+#
+# Notes
+#   All keywords, names are case insensitive.
+#   The script starts with the initialization/setup phase
+#   which includes all of the statements up to the
+#   loop statement.
+#
+
+# Test of import. Brings in definitions used below
+import definitions.dmx
+
+# Initial state (set channel value(s))
+#set tp64rgb rgb-off
+set tp64rgb on on on
+set tp64mode rgb-mode
+set tp64dimmer off
+send
+
+# Main do loop
+# The main do loop runs until the app is terminated.
+## This will run the program every day at hh:mm:ss (24 hour clock)
+#Do-At 14:31:00
+do-forever
+
+    # Execute the script block for hh:mm:ss amount of time
+    #Do-For 00:00:30
+
+        # Each step runs for step-time 5.0
+        step default-fade-time default-step-time
+            # Immediate changes
+            # set tp64rgb on off on
+            set tp64dimmer on
+            send
+            # Values fade from their initial to target values over fadetime
+            fade tp64rgb on on off
+        step-end
+
+        #set tp64rgb rgb-off
+        set tp64dimmer on
+        send
+
+        step default-fade-time default-step-time
+            fade tp64rgb off on on
+        step-end
+
+        #set tp64rgb rgb-off
+        set tp64dimmer on
+        send
+
+        step default-fade-time default-step-time
+            fade tp64rgb on on on
+        step-end
+
+        #set tp64dimmer off
+        send
+
+    #Do-For-End
+
+#Do-At-End
+    #pause 00:00:05
+    reset
+do-forever-end
+
+# If there is no loop statement, the script ends when there
+# are no more statements.
+
+# value bad 0 0 0 0 256

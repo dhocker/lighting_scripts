@@ -1,0 +1,60 @@
+#
+# DMX script for Halloween floodlight
+#
+# Notes
+#   All keywords, names are case insensitive.
+#   The script starts with the initialization/setup phase
+#   which includes all of the statements up to the
+#   loop statement.
+#
+
+# Test of import. Brings in definitions used below
+import definitions.dmx
+
+# Local definitions
+value orange 255 83 13
+value purple 227 11 227
+
+# Time definitions
+define default-fade-time 15.0
+define default-step-time 30.0
+define periodtime 0.5
+step-period periodtime
+
+# Initial state (set channel value(s))
+set tp64rgb rgb-off
+set tp64mode rgb-mode
+#set tp64dimmer on
+set tp64dimmer 127
+send
+
+# Main do loop
+# The main do loop runs until the app is terminated.
+## This will run the program every day at hh:mm:ss (24 hour clock)
+#Do-At 19:00:00
+do-forever
+
+    # Execute the script block for hh:mm:ss amount of time
+    #Do-For 04:00:00
+
+        # Start at purple
+        set tp64rgb purple
+        send
+
+        # Each step runs for step-time
+        step default-fade-time default-step-time
+            # Fade from purple to orange
+            fade tp64rgb orange
+        step-end
+
+        # Each step runs for step-time
+        step default-fade-time default-step-time
+            # Fade from orange to purple
+            fade tp64rgb purple
+        step-end
+
+    #Do-For-End
+
+#Do-At-End
+do-forever-end
+reset

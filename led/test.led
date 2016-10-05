@@ -1,0 +1,53 @@
+#
+# LED test script
+#
+# Notes
+#   All keywords, names are case insensitive.
+#   The script starts with the initialization/setup phase
+#   which includes all of the statements up to the
+#   loop statement.
+#
+
+# Test of import. Brings in definitions used below
+# import definitions.led
+
+color red 255 0 0
+color green 0 255 0
+color blue 0 0 255
+
+define wait1 50.0
+define qtr-bright 64
+define half-bright 128
+
+# Main do loop
+# The main do loop runs until the app is terminated.
+## This will run the program every day at hh:mm:ss (24 hour clock)
+#Do-At 14:31:00
+#do-for 00:01:00
+    brightness qtr-bright
+    colorwipe red wait1
+    colorwipe green wait1
+    colorwipe blue wait1
+    rainbow 21.0 2
+    rainbowcycle 19.0 4
+    theaterchase 255 83 13 50.0 20
+    theaterchaserainbow 50.0
+    scrollpixels green 21.0 999
+    randompixels 22.0 501
+    reset
+
+    brightness half-bright
+    colorwipe red wait1
+    colorwipe green wait1
+    colorwipe blue wait1
+    rainbow 21.0 2
+    rainbowcycle 19.0 4
+    theaterchase 255 83 13 50.0 20
+    theaterchaserainbow 50.0
+    scrollpixels blue 21.0 999
+    randompixels 22.0 501
+    reset
+#do-for-end
+
+# If there is no loop statement, the script ends when there
+# are no more statements.
