@@ -12,8 +12,12 @@
 import definitions.dmx
 
 # Local definitions
-value orange 255 83 13
+# value orange 255 83 13
+# value orange 173 57 9
+value orange 232 44 12
+# value orange 168 32 8
 value purple 227 11 227
+value brown 189 93 0
 
 # Time definitions
 define default-fade-time 15.0
@@ -45,6 +49,10 @@ do-forever
         step default-fade-time default-step-time
             # Fade from purple to orange
             fade tp64rgb orange
+        step-end
+
+        step default-fade-time default-step-time
+            fade tp64rgb brown
         step-end
 
         # Each step runs for step-time
