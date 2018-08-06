@@ -16,6 +16,8 @@ color green 0 255 0
 color blue 0 0 255
 
 define wait1 50.0
+define sinewave_wait 200.0
+define sinewave_iter 300
 define scroll1 30.0
 define scroll-count 1000
 define random1 30.0
@@ -27,6 +29,7 @@ define half-bright 128
 # Runs until 10:45pm
 do-until 22:45:00
     brightness qtr-bright
+    sinewave sinewave_wait sinewave_iter
     colorwipe red wait1
     colorwipe green wait1
     colorwipe blue wait1
