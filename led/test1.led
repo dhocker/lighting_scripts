@@ -1,0 +1,39 @@
+#
+# LED test script
+#
+# Notes
+#   All keywords, names are case insensitive.
+#   The script starts with the initialization/setup phase
+#   which includes all of the statements up to the
+#   loop statement.
+#
+
+# Test of import. Brings in definitions used below
+# import definitions.led
+
+color red 255 0 0
+color green 0 255 0
+color blue 0 0 255
+
+define wait1 50.0
+define theater-chase-time 50.0
+define qtr-bright 64
+define half-bright 128
+
+# Do until 10:30pm
+do-until 22:45:00
+    brightness qtr-bright
+    colorwipe red wait1
+    colorwipe green wait1
+    colorwipe blue wait1
+    rainbow 21.0 2
+    rainbowcycle 19.0 4
+    theaterchase 255 83 13 theater-chase-time 20
+    theaterchaserainbow theater-chase-time
+    scrollpixels green 21.0 999
+    randompixels 22.0 501
+    reset
+do-until-end
+
+# If there is no loop statement, the script ends when there
+# are no more statements.
