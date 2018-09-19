@@ -8,7 +8,7 @@
 #   loop statement.
 #
 
-logmessage ColorFade Test Script
+logmessage TwoColor Test Script
 
 # Test of import. Brings in definitions used below
 # import definitions.led
@@ -18,18 +18,18 @@ color green 0 255 0
 color blue 0 0 255
 color white 255 255 255
 color black 0 0 0
+color orange 255 64 0
+color purple 102 0 204
 
-define wait1 50.0
-define color-fade-step-time 100.0
-define theater-chase-time 50.0
 define qtr-bright 64
 define half-bright 128
+define twocolor-step-time 500.0
 
 # Do until 10:30pm
 # do-until 22:45:00
     brightness qtr-bright
-	logmessage colorfade $white to $black step time $color-fade-step-time
-	colorfade white black color-fade-step-time 256
+	logmessage twocolor $orange and $purple step time $twocolor-step-time
+	twocolor orange purple twocolor-step-time 200
     reset
 # do-until-end
 
