@@ -1,0 +1,68 @@
+#
+# Snoopy's Dog House Christmas Script
+#
+# Notes
+#   All keywords, names are case insensitive.
+#   The script starts with the initialization/setup phase
+#   which includes all of the statements up to the
+#   loop statement.
+#
+
+# Test of import. Brings in definitions used below
+# import definitions.led
+
+color red 255 0 0
+color green 0 255 0
+color blue 0 0 255
+
+color white 255 255 255
+color black 0 0 0
+color orange 255 64 0
+color purple 102 0 204
+
+color theater-chase-color 255 83 13
+
+define wait1 50.0
+define twocolor-wait 500.0
+define twocolor-count 100
+define sinewave_wait 200.0
+define sinewave_iter 300
+define scroll-time1 30.0
+define scroll-count 500
+define random1 30.0
+define random-count 500
+define theater-chase-time 100.0
+define rainbow-time 20.0
+define rainbowcycle-time 19.0
+define qtr-bright 64
+define half-bright 128
+
+# Runs until 10:45pm
+do-until 22:45:00
+    brightness qtr-bright
+
+    twocolor red green twocolor-wait twocolor-count
+
+    do-for-n 10
+        colorwipe red wait1
+        colorwipe green wait1
+        colorwipe blue wait1
+    do-for-n-end
+
+    sinewave sinewave_wait sinewave_iter
+
+    # rainbow rainbow-time 1
+    # rainbowcycle rainbowcycle-time 4
+
+    theaterchase theater-chase-color theater-chase-time 20
+    theaterchaserainbow theater-chase-time
+    scrollpixels red scroll-time1 scroll-count
+    scrollpixels green scroll-time1 scroll-count
+    scrollpixels blue scroll-time1 scroll-count
+    randompixels random1 random-count
+    
+    reset
+do-until-end
+
+# If there is no loop statement, the script ends when there
+# are no more statements.
