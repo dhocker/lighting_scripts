@@ -14,38 +14,50 @@
 color red 255 0 0
 color green 0 255 0
 color blue 0 0 255
+color orange 255 83 13
 
 define wait1 25.0
-define sinewave_wait 50.0
+define sinewave_wait 25.0
 define sinewave_iter 600
 define scroll1 15.0
 define scroll-count 1000
-define random1 20.0
-define random-count 500
-define theater-chase-time 100.0
+define random-px-time 10.0
+define random-count 2000
+define theater-chase-time 50.0
+define colorfade-wait 1000
+define colorfade-iter 20
+define twocolor-wait 500
+define twocolor-iter 60
+define color77-wait 200
+define color77-iter 200
+
+define sixteenth-bright 16
+define low-bright 24
 define eighth-bright 32
 define qtr-bright 64
 define half-bright 128
 
-# Runs until 10:45pm
-do-until 22:45:00
-    brightness eighth-bright
+# Establish starting brightness. Can be changed by remote command.
+brightness low-bright
+
+# Runs until 8:45pm
+do-until 20:45:00
+    color77 color77-wait color77-iter
+    colorfade red green colorfade-wait colorfade-iter
+    colorfade green red colorfade-wait colorfade-iter
     sinewave sinewave_wait sinewave_iter
-    colorwipe red wait1
-    colorwipe green wait1
-    colorwipe blue wait1
-    colorwipe red wait1
-    colorwipe green wait1
-    colorwipe blue wait1
-    colorwipe red wait1
-    colorwipe green wait1
-    colorwipe blue wait1
+    do-for-n 4
+        colorwipe red wait1
+        colorwipe green wait1
+        colorwipe blue wait1
+    do-for-n-end
     rainbow 21.0 2
+    twocolor green red twocolor-wait twocolor-iter
     rainbowcycle 19.0 4
-    theaterchase 255 83 13 theater-chase-time 20
+    theaterchase red theater-chase-time 40
     theaterchaserainbow theater-chase-time
     scrollpixels green scroll1 scroll-count
-    randompixels random1 random-count
+    randompixels random-px-time random-count
     reset
 do-until-end
 
