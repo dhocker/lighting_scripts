@@ -31,10 +31,16 @@ define	colorfade-iter 60
 define 	qtr-bright 64
 define 	half-bright 128
 
+eval orange (232,44,12)
+eval purple (227,11,227)
+eval color77halloween [(232,44,12),(227,11,227),(232,44,12),(227,11,227),(232,44,12),(227,11,227),(232,44,12)]
+
 # Runs until 11:00pm
+brightness qtr-bright
 do-until 23:00:00
-    brightness qtr-bright
+    color77 color77halloween # 200.0 100
 	colorfade orange purple wait2 colorfade-iter
+	colorfade purple orange wait2 colorfade-iter
     #sinewave sinewave_wait sinewave_iter
     #colorwipe red wait1
     #colorwipe green wait1
