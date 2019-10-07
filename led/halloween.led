@@ -15,8 +15,8 @@ color 	blue 	0 0 255
 # value orange 173 57 9
 color 	orange 	232 44 12
 # value orange 	168 32 8
-value 	purple 	227 11 227
-value 	brown 	189 93 0
+color 	purple 	227 11 227
+color 	brown 	189 93 0
 
 define 	wait1 50.0
 define 	wait2 1000.0
