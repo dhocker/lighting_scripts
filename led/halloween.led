@@ -38,24 +38,24 @@ eval color77halloween [(232,44,12),(227,11,227),(232,44,12),(227,11,227),(232,44
 # Runs until 11:00pm
 brightness qtr-bright
 do-until 23:00:00
-    color77 color77halloween # 200.0 100
 	colorfade orange purple wait2 colorfade-iter
 	colorfade purple orange wait2 colorfade-iter
-    #sinewave sinewave_wait sinewave_iter
-    #colorwipe red wait1
-    #colorwipe green wait1
-    #colorwipe blue wait1
-    #colorwipe red wait1
-    #colorwipe green wait1
-    #colorwipe blue wait1
-    #colorwipe red wait1
-    #colorwipe green wait1
-    #colorwipe blue wait1
+    color77 color77halloween 200.0 100
+    sinewave sinewave_wait sinewave_iter
+    colorwipe orange wait1
+    colorwipe purple wait1
+    colorwipe orange wait1
+    colorwipe purple wait1
+    colorwipe orange wait1
+    colorwipe purple wait1
     #rainbow 21.0 2
     #rainbowcycle 19.0 4
-    #theaterchase 255 83 13 theater-chase-time 20
+    theaterchase orange theater-chase-time 20
+    theaterchase purple theater-chase-time 20
     #theaterchaserainbow theater-chase-time
-    #scrollpixels green scroll1 scroll-count
+    scrollpixels orange scroll1 scroll-count
+    scrollpixels purple scroll1 scroll-count
     #randompixels random1 random-count
-    reset
 do-until-end
+
+reset
