@@ -19,7 +19,7 @@ color orange 255 83 13
 define wait1 25.0
 define sinewave_wait 25.0
 define sinewave_iter 600
-define scroll1 15.0
+define scroll1 30.0
 define scroll-count 1000
 define random-px-time 10.0
 define random-count 2000
