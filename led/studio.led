@@ -30,6 +30,7 @@ define twocolor-wait 500
 define twocolor-iter 60
 define color77-wait 200
 define color77-iter 200
+eval color77-custom [(255,0,0),(0,255,0),(0,0,255),(255,255,0),(255,0,255),(0,255,255),(255,255,255)]
 
 define sixteenth-bright 16
 define low-bright 24
@@ -42,7 +43,7 @@ brightness low-bright
 
 # Runs until 8:45pm
 do-until 20:45:00
-    color77 color77-wait color77-iter
+    color77 color77-custom color77-wait color77-iter
     colorfade red green colorfade-wait colorfade-iter
     colorfade green red colorfade-wait colorfade-iter
     sinewave sinewave_wait sinewave_iter
