@@ -23,7 +23,7 @@ define scroll1 15.0
 define scroll-count 1000
 define random-px-time 10.0
 define random-count 2000
-define theater-chase-time 50.0
+define theater-chase-time 100.0
 define colorfade-wait 1000
 define colorfade-iter 20
 define twocolor-wait 500
