@@ -28,6 +28,7 @@ define 	random1 30.0
 define 	random-count 500
 define 	theater-chase-time 100.0
 define	colorfade-iter 60
+define  default-bright 32
 define 	qtr-bright 64
 define 	half-bright 128
 
@@ -36,8 +37,8 @@ eval purple (227,11,227)
 eval color77halloween [(232,44,12),(227,11,227),(232,44,12),(227,11,227),(232,44,12),(227,11,227),(232,44,12)]
 
 # Runs until 11:00pm
-brightness qtr-bright
-do-until 23:00:00
+brightness default-bright
+do-until 19:00:00
 	colorfade orange purple wait2 colorfade-iter
 	colorfade purple orange wait2 colorfade-iter
     color77 color77halloween 200.0 100
