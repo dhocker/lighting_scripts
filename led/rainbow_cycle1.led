@@ -1,6 +1,8 @@
+define rainbow-wait-time 21.0
+define rainbow-iter 4
 define low-bright 24
 
 brightness low-bright
 do-forever
-    rainbowcycle 19.0 4
+    rainbowcycle rainbow-wait-time rainbow-iter
 do-forever-end

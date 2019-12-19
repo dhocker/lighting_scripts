@@ -22,7 +22,7 @@ define scroll1 30.0
 define scroll-count 1000
 define random1 30.0
 define random-count 500
-define theater-chase-time 100.0
+define theater-chase-time 200.0
 define qtr-bright 64
 define half-bright 128
 

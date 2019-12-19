@@ -2,13 +2,14 @@ color red 255 0 0
 color green 0 255 0
 color blue 0 0 255
 
-define theater-chase-time 100.0
+define theater-chase-time 200.0
+define theater-chase-iter 10
 define low-bright 24
 
 brightness low-bright
 
 do-forever
-    theaterchase red theater-chase-time 40
-    theaterchase green theater-chase-time 40
-    theaterchase blue theater-chase-time 40
+    theaterchase red theater-chase-time theater-chase-iter
+    theaterchase green theater-chase-time theater-chase-iter
+    theaterchase blue theater-chase-time theater-chase-iter
 do-forever-end

@@ -20,17 +20,13 @@ color white 255 255 255
 color black 0 0 0
 
 define wait1 50.0
-define color-fade-step-time 100.0
-define theater-chase-time 50.0
-define qtr-bright 64
-define half-bright 128
+define color-fade-step-time 200.0
+define low-bright 24
 
 # Do until 10:30pm
 # do-until 22:45:00
-    brightness qtr-bright
-	logmessage colorfade $white to $black step time $color-fade-step-time
+    brightness low-bright
 	colorfade white black color-fade-step-time 256
-    reset
 # do-until-end
 
 # If there is no loop statement, the script ends when there
