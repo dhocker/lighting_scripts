@@ -1,0 +1,7 @@
+define theater-chase-time 100.0
+define low-bright 24
+
+brightness low-bright
+do-forever
+    theaterchaserainbow theater-chase-time
+do-forever-end

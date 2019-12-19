@@ -1,0 +1,6 @@
+define random-px-time 10.0
+define random-count 2000
+
+do-forever
+    randompixels random-px-time random-count
+do-forever-end

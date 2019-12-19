@@ -1,0 +1,10 @@
+define color77-wait 200
+define color77-iter 200
+define low-bright 24
+
+eval color77-custom [(255,0,0),(0,255,0),(0,0,255),(255,255,0),(255,0,255),(0,255,255),(255,255,255)]
+
+brightness low-bright
+do-forever
+    color77 color77-custom color77-wait color77-iter
+do-forever-end

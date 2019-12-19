@@ -1,0 +1,6 @@
+define low-bright 24
+
+brightness low-bright
+do-forever
+    rainbow 21.0 2
+do-forever-end

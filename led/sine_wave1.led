@@ -1,0 +1,8 @@
+define sinewave_wait 25.0
+define sinewave_iter 600
+define low-bright 24
+
+brightness low-bright
+do-forever
+    sinewave sinewave_wait sinewave_iter
+do-forever-end

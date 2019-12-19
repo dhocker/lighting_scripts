@@ -1,0 +1,6 @@
+define low-bright 24
+
+brightness low-bright
+do-forever
+    rainbowcycle 19.0 4
+do-forever-end

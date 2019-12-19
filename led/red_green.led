@@ -1,0 +1,13 @@
+# Two color algorithm
+ 
+color red 255 0 0
+color green 0 255 0
+color blue 0 0 255
+
+define twocolor-step-time 750.0
+define low-bright 24
+
+brightness low-bright
+do-forever
+    twocolor red green twocolor-step-time 200
+do-forever-end
