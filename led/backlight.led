@@ -1,0 +1,48 @@
+#
+# Rack backlight script
+#
+# Notes
+#   All keywords, names are case insensitive.
+#   The script starts with the initialization/setup phase
+#   which includes all of the statements up to the
+#   loop statement.
+#
+
+# Test of import. Brings in definitions used below
+# import definitions.led
+
+color red 255 0 0
+color green 0 255 0
+color blue 0 0 255
+
+define wait1 50.0
+define sinewave_wait 200.0
+define sinewave_iter 300
+define scroll1 30.0
+define scroll-count 1000
+define random1 30.0
+define random-count 500
+define theater-chase-time 200.0
+define eighth-bright 32
+define qtr-bright 64
+define half-bright 128
+
+# Runs until 10:45pm
+do-forever
+    brightness eight-bright
+    sinewave sinewave_wait sinewave_iter
+    colorwipe red wait1
+    colorwipe green wait1
+    colorwipe blue wait1
+    colorwipe red wait1
+    colorwipe green wait1
+    colorwipe blue wait1
+    colorwipe red wait1
+    colorwipe green wait1
+    colorwipe blue wait1
+    rainbow 21.0 2
+    rainbowcycle 19.0 4
+do-forever-end
+
+# If there is no loop statement, the script ends when there
+# are no more statements.
