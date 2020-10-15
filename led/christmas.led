@@ -23,12 +23,13 @@ define scroll-count 1000
 define random1 30.0
 define random-count 500
 define theater-chase-time 200.0
+define eighth-bright 32
 define qtr-bright 64
 define half-bright 128
 
 # Runs until 10:45pm
 do-until 22:45:00
-    brightness qtr-bright
+    brightness eighth-bright
     sinewave sinewave_wait sinewave_iter
     colorwipe red wait1
     colorwipe green wait1
