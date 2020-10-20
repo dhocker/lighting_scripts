@@ -24,14 +24,18 @@ color purple 102 0 204
 define qtr-bright 64
 define half-bright 128
 define twocolor-step-time 500.0
+define twocolor-iterations 60
 
 # Do until 10:30pm
-# do-until 22:45:00
+do-until 22:45:00
     brightness qtr-bright
-	logmessage twocolor $orange and $purple step time $twocolor-step-time
-	twocolor orange purple twocolor-step-time 200
+    logmessage twocolor $orange and $purple step time $twocolor-step-time
+    twocolor orange purple twocolor-step-time twocolor-iterations
+    twocolor red green twocolor-step-time twocolor-iterations
+    twocolor red blue twocolor-step-time twocolor-iterations
+    twocolor blue green twocolor-step-time twocolor-iterations
     reset
-# do-until-end
+do-until-end
 
 # If there is no loop statement, the script ends when there
 # are no more statements.
