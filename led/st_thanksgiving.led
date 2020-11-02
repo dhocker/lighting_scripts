@@ -62,7 +62,7 @@ do-until 19:00:00
     # sinewave sinewave_wait sinewave_iter
     colorwipe yellow wait1
     colorwipe orange-brown wait1
-    colorwipe gold wait1
+    colorwipe yellow-gold wait1
     colorwipe fall-green wait1
     colorwipe fall-red wait1
     colorwipe green-blue wait1
