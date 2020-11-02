@@ -22,8 +22,9 @@ define 	wait1 50.0
 define 	wait2 1000.0
 define 	sinewave_wait 200.0
 define 	sinewave_iter 300
-define 	scroll1 30.0
+define 	scroll1 20.0
 define 	scroll-count 1000
+define  scroll-pixels 20
 define 	random1 30.0
 define 	random-count 500
 define 	theater-chase-time 100.0
@@ -36,9 +37,9 @@ eval orange (232,44,12)
 eval purple (227,11,227)
 eval color77halloween [(232,44,12),(227,11,227),(232,44,12),(227,11,227),(232,44,12),(227,11,227),(232,44,12)]
 
-# Runs until 10:28pm
+# Runs until 10:15pm
 brightness default-bright
-do-until 22:28:00
+do-until 22:15:00
     colorfade orange purple wait2 colorfade-iter
     colorfade purple orange wait2 colorfade-iter
 
@@ -60,8 +61,8 @@ do-until 22:28:00
     theaterchase orange theater-chase-time 20
     theaterchase purple theater-chase-time 20
 
-    scrollpixels orange scroll1 scroll-count
-    scrollpixels purple scroll1 scroll-count
+    scrollpixels orange scroll1 scroll-count scroll-pixels
+    scrollpixels purple scroll1 scroll-count scroll-pixels
 do-until-end
 
 reset
