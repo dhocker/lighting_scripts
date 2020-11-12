@@ -68,6 +68,7 @@ do-until 19:00:00
     colorwipe green-blue wait1
     #rainbow 21.0 2
     #rainbowcycle 19.0 4
+    theaterchase2 yellow orange theater-chase-time 20
     theaterchase yellow theater-chase-time 20
     theaterchase orange theater-chase-time 20
     theaterchase fall-green theater-chase-time 20
