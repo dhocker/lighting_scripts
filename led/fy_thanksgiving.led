@@ -55,7 +55,7 @@ define 	half-bright 128
 
 # Runs until 11:00pm
 brightness default-bright
-do-until 19:00:00
+do-until 22:45:00
 	colorfade orange fall-green color-fade-speed colorfade-iter
 	colorfade fall-green orange color-fade-speed colorfade-iter
     # color77 color77turkey 200.0 100
@@ -72,6 +72,7 @@ do-until 19:00:00
     theaterchase yellow theater-chase-time 20
     theaterchase orange theater-chase-time 20
     theaterchase fall-green theater-chase-time 20
+    theaterchase2 fall-green yellow theater-chase-time 20
     #theaterchaserainbow theater-chase-time
     scrollpixels orange scroll1 scroll-count scroll-pixels
     scrollpixels fall-green scroll1 scroll-count scroll-pixels
