@@ -56,28 +56,30 @@ define 	half-bright 128
 # Runs until 11:00pm
 brightness default-bright
 do-until 22:15:00
-	colorfade orange fall-green color-fade-speed colorfade-iter
-	colorfade fall-green orange color-fade-speed colorfade-iter
-    # color77 color77turkey 200.0 100
-    # sinewave sinewave_wait sinewave_iter
-    colorwipe yellow wait1
-    colorwipe orange-brown wait1
-    colorwipe yellow-gold wait1
-    colorwipe fall-green wait1
-    colorwipe fall-red wait1
-    colorwipe green-blue wait1
-    #rainbow 21.0 2
-    #rainbowcycle 19.0 4
-    theaterchase2 green-blue orange theater-chase-time 20
-    theaterchase yellow theater-chase-time 20
-    theaterchase orange theater-chase-time 20
-    theaterchase fall-green theater-chase-time 20
-    theaterchase2 fall-green blue theater-chase-time 20
-    #theaterchaserainbow theater-chase-time
-    scrollpixels orange scroll1 scroll-count scroll-pixels
-    scrollpixels fall-green scroll1 scroll-count scroll-pixels
-    #randompixels random1 random-count
-    theaterchase2 orange blue theater-chase-time 20
+	select-one
+		colorfade orange fall-green color-fade-speed colorfade-iter
+		colorfade fall-green orange color-fade-speed colorfade-iter
+	    # color77 color77turkey 200.0 100
+	    # sinewave sinewave_wait sinewave_iter
+	    colorwipe yellow wait1
+	    colorwipe orange-brown wait1
+	    colorwipe yellow-gold wait1
+	    colorwipe fall-green wait1
+	    colorwipe fall-red wait1
+	    colorwipe green-blue wait1
+	    #rainbow 21.0 2
+	    #rainbowcycle 19.0 4
+	    theaterchase2 green-blue orange theater-chase-time 20
+	    theaterchase yellow theater-chase-time 20
+	    theaterchase orange theater-chase-time 20
+	    theaterchase fall-green theater-chase-time 20
+	    theaterchase2 fall-green blue theater-chase-time 20
+	    #theaterchaserainbow theater-chase-time
+	    scrollpixels orange scroll1 scroll-count scroll-pixels
+	    scrollpixels fall-green scroll1 scroll-count scroll-pixels
+	    #randompixels random1 random-count
+	    theaterchase2 orange blue theater-chase-time 20
+	select-one-end
 do-until-end
 
 reset
