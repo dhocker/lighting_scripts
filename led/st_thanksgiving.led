@@ -51,7 +51,7 @@ define 	half-bright 128
 #eval brown2 (0xC4,0x72,0x3B)
 # eval color77halloween [(232,44,12),(227,11,227),(232,44,12),(227,11,227),(232,44,12),(227,11,227),(232,44,12)]
 # eval color77turkey [(232,44,12),(255,170,0),(232,44,12),(255,170,0),(232,44,12),(255,170,0),(232,44,12)]
-# eval color77turkey [yellow,orange_rust,yellow,orange_rust,yellow,orange_rust,yellow]
+eval color77turkey [yellow,orange_rust,yellow,orange_rust,yellow,orange_rust,yellow]
 
 # Runs until 11:00pm
 brightness default-bright
@@ -59,7 +59,7 @@ do-until 19:00:00
 	select-one
 		colorfade orange fall-green color-fade-speed colorfade-iter
 		colorfade fall-green orange color-fade-speed colorfade-iter
-	    # color77 color77turkey 200.0 100
+	    color77 color77turkey 200.0 100
 	    # sinewave sinewave_wait sinewave_iter
 	    colorwipe yellow wait1
 	    colorwipe orange-brown wait1
