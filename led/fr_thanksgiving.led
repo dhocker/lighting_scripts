@@ -51,9 +51,9 @@ define 	half-bright 128
 #eval brown2 (0xC4,0x72,0x3B)
 # eval color77halloween [(232,44,12),(227,11,227),(232,44,12),(227,11,227),(232,44,12),(227,11,227),(232,44,12)]
 # eval color77turkey [(232,44,12),(255,170,0),(232,44,12),(255,170,0),(232,44,12),(255,170,0),(232,44,12)]
-# eval color77turkey [yellow,orange_rust,yellow,orange_rust,yellow,orange_rust,yellow]
+eval color77turkey [yellow,orange_rust,yellow,orange_rust,yellow,orange_rust,yellow]
 
-# Runs until 11:00pm
+# Runs until 10:15pm
 brightness default-bright
 do-until 22:15:00
 	select-one
