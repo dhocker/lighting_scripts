@@ -40,29 +40,31 @@ eval color77halloween [(232,44,12),(227,11,227),(232,44,12),(227,11,227),(232,44
 # Runs until 10:15pm
 brightness default-bright
 do-until 22:15:00
-    colorfade orange purple wait2 colorfade-iter
-    colorfade purple orange wait2 colorfade-iter
+    select-one
+        colorfade orange purple wait2 colorfade-iter
+        colorfade purple orange wait2 colorfade-iter
 
-    color77 color77halloween 200.0 100
+        color77 color77halloween 200.0 100
 
-    # sinewave sinewave_wait sinewave_iter
+        # sinewave sinewave_wait sinewave_iter
 
-    colorwipe orange wait1
-    colorwipe purple wait1
-    colorwipe orange wait1
-    colorwipe purple wait1
-    colorwipe orange wait1
-    colorwipe purple wait1
+        colorwipe orange wait1
+        colorwipe purple wait1
+        colorwipe orange wait1
+        colorwipe purple wait1
+        colorwipe orange wait1
+        colorwipe purple wait1
 
-    color77 color77halloween 200.0 100
+        color77 color77halloween 200.0 100
 
-    theaterchase orange theater-chase-time 20
-    theaterchase purple theater-chase-time 20
-    theaterchase orange theater-chase-time 20
-    theaterchase purple theater-chase-time 20
+        theaterchase orange theater-chase-time 20
+        theaterchase purple theater-chase-time 20
+        theaterchase orange theater-chase-time 20
+        theaterchase purple theater-chase-time 20
 
-    scrollpixels orange scroll1 scroll-count scroll-pixels
-    scrollpixels purple scroll1 scroll-count scroll-pixels
+        scrollpixels orange scroll1 scroll-count scroll-pixels
+        scrollpixels purple scroll1 scroll-count scroll-pixels
+    select-one-end
 do-until-end
 
 reset
