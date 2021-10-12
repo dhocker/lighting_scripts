@@ -17,7 +17,7 @@ color 	orange 	232 44 12
 # value orange 	168 32 8
 color 	purple 	227 11 227
 color 	brown 	189 93 0
-color 	yellow	255 255 51
+color 	yellow	255 192 51
 
 define  wait10 10.0
 define  wait25 25.0
