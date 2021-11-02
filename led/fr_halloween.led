@@ -44,7 +44,7 @@ eval color77halloween [(232,44,12),(227,11,227),(232,44,12),(227,11,227),(232,44
 
 # Runs until 10:15pm
 brightness default-bright
-do-until 22:15:00
+do-until 23:15:00
     select-one
         colorfade orange purple wait1000 colorfade-iter
         colorfade purple orange wait1000 colorfade-iter
