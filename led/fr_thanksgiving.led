@@ -55,7 +55,7 @@ eval color77turkey [yellow,orange_rust,yellow,orange_rust,yellow,orange_rust,yel
 
 # Runs until 10:15pm
 brightness default-bright
-do-until 22:15:00
+do-until 23:15:00
 	select-one
 		colorfade orange fall-green color-fade-speed colorfade-iter
 		colorfade fall-green orange color-fade-speed colorfade-iter

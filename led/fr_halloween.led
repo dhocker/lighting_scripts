@@ -17,9 +17,13 @@ color 	orange 	232 44 12
 # value orange 	168 32 8
 color 	purple 	227 11 227
 color 	brown 	189 93 0
+color 	yellow	255 192 51
 
-define 	wait1 50.0
-define 	wait2 1000.0
+define  wait10 10.0
+define  wait25 25.0
+define 	wait50 50.0
+define 	wait1000 1000.0
+define 	wait500 500.0
 define 	sinewave_wait 200.0
 define 	sinewave_iter 300
 define 	scroll1 20.0
@@ -29,6 +33,7 @@ define 	random1 30.0
 define 	random-count 500
 define 	theater-chase-time 100.0
 define	colorfade-iter 60
+define	twocolor-iter 60
 define  default-bright 32
 define 	qtr-bright 64
 define 	half-bright 128
@@ -39,30 +44,42 @@ eval color77halloween [(232,44,12),(227,11,227),(232,44,12),(227,11,227),(232,44
 
 # Runs until 10:15pm
 brightness default-bright
-do-until 22:15:00
-    colorfade orange purple wait2 colorfade-iter
-    colorfade purple orange wait2 colorfade-iter
+do-until 23:15:00
+    select-one
+        colorfade orange purple wait1000 colorfade-iter
+        colorfade purple orange wait1000 colorfade-iter
+		colorfade orange yellow wait500 colorfade-iter 
 
-    color77 color77halloween 200.0 100
+        color77 color77halloween 200.0 100
+		
+		twocolor orange purple wait500 twocolor-iter
+		twocolor yellow orange wait500 twocolor-iter
 
-    # sinewave sinewave_wait sinewave_iter
+        # sinewave sinewave_wait sinewave_iter
 
-    colorwipe orange wait1
-    colorwipe purple wait1
-    colorwipe orange wait1
-    colorwipe purple wait1
-    colorwipe orange wait1
-    colorwipe purple wait1
+        colorwipe orange wait25
+        colorwipe purple wait25
+        colorwipe yellow wait25
+        # colorwipe orange wait50
+        # colorwipe purple wait50
+        # colorwipe orange wait50
+        # colorwipe purple wait50
 
-    color77 color77halloween 200.0 100
+        color77 color77halloween 200.0 100
 
-    theaterchase orange theater-chase-time 20
-    theaterchase purple theater-chase-time 20
-    theaterchase orange theater-chase-time 20
-    theaterchase purple theater-chase-time 20
+        theaterchase orange theater-chase-time 20
+        theaterchase purple theater-chase-time 20
+        theaterchase yellow theater-chase-time 20
+        # theaterchase orange theater-chase-time 20
+        # theaterchase purple theater-chase-time 20
+		theaterchase2 orange purple theater-chase-time 20
+		theaterchase2 purple orange theater-chase-time 20
+		theaterchase2 orange yellow theater-chase-time 20
 
-    scrollpixels orange scroll1 scroll-count scroll-pixels
-    scrollpixels purple scroll1 scroll-count scroll-pixels
+        scrollpixels orange wait10 scroll-count scroll-pixels
+        scrollpixels purple wait10 scroll-count scroll-pixels
+        scrollpixels yellow wait10 scroll-count scroll-pixels
+    select-one-end
 do-until-end
 
 reset
