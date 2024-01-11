@@ -1,0 +1,53 @@
+#
+# Snoopy's Dog House Christmas Script
+#
+# Notes
+#   All keywords, names are case insensitive.
+#   The script starts with the initialization/setup phase
+#   which includes all of the statements up to the
+#   loop statement.
+#
+
+define wait1 50.0
+define wipe-wait 250.0
+define solidcolor-wait 5000.0
+define twocolor-wait 500.0
+define twocolor-count 100
+define sinewave_wait 200.0
+define sinewave_iter 300
+define scroll-time1 30.0
+define scroll-count 500
+define random1 30.0
+define random-count 500
+define theater-chase-time 100.0
+define rainbow-time 20.0
+define rainbowcycle-time 19.0
+define qtr-bright 64
+define half-bright 128
+
+brightness qtr-bright	
+
+# Runs until 10:45pm
+do-until 22:45:00
+	select-one
+		solidcolor red solidcolor-wait
+		solidcolor green solidcolor-wait
+	    twocolor red green twocolor-wait twocolor-count
+	    colorwipe red wipe-wait
+	    colorwipe green wipe-wait
+	    colorwipe blue wipe-wait
+	    sinewave sinewave_wait sinewave_iter
+	    theaterchase red theater-chase-time 20
+	    theaterchase green theater-chase-time 20
+	    theaterchase white theater-chase-time 20
+	    theaterchase2 red green theater-chase-time 20
+	    theaterchaserainbow theater-chase-time
+	    scrollpixels red scroll-time1 scroll-count
+	    scrollpixels green scroll-time1 scroll-count
+	    scrollpixels blue scroll-time1 scroll-count
+	    randompixels random1 random-count
+    select-one-end
+do-until-end
+
+# If there is no loop statement, the script ends when there
+# are no more statements.
