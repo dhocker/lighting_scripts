@@ -29,7 +29,7 @@ define half-bright 128
 
 # Runs until 10:45pm
 do-forever
-    brightness eight-bright
+    brightness eighth-bright
     sinewave sinewave_wait sinewave_iter
     colorwipe red wait1
     colorwipe green wait1
