@@ -1,4 +1,4 @@
-define sinewave_wait 25.0
+define sinewave_wait 100.0
 define sinewave_iter 600
 define low-bright 24
 

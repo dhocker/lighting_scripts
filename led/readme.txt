@@ -6,3 +6,5 @@ fy_*		Front yard marker lights
 snpy_*		Snoopy's dog house
 st_*		Studio tree
 
+=======
+* = halloween, thanksgiving or christmas

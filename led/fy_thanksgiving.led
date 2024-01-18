@@ -92,34 +92,6 @@ define 	half-bright 128
 # eval color77turkey [(232,44,12),(255,170,0),(232,44,12),(255,170,0),(232,44,12),(255,170,0),(232,44,12)]
 eval color77turkey [yellow,orange_rust,yellow,orange_rust,yellow,orange_rust,yellow]
 
-# Runs until 10:45pm
-brightness default-bright
-do-until 22:45:00
-	colorfade orange fall-green color-fade-speed colorfade-iter
-	colorfade fall-green orange color-fade-speed colorfade-iter
-    color77 color77turkey 200.0 100
-    # sinewave sinewave_wait sinewave_iter
-    colorwipe yellow wait1
-    colorwipe orange-brown wait1
-    colorwipe yellow-gold wait1
-    colorwipe fall-green wait1
-    colorwipe fall-red wait1
-    colorwipe green-blue wait1
-    #rainbow 21.0 2
-    #rainbowcycle 19.0 4
-    theaterchase2 yellow orange theater-chase-time 20
-    theaterchase yellow theater-chase-time 20
-    theaterchase orange theater-chase-time 20
-    theaterchase fall-green theater-chase-time 20
-    theaterchase2 fall-green yellow theater-chase-time 20
-    #theaterchaserainbow theater-chase-time
-    scrollpixels orange scroll1 scroll-count scroll-pixels
-    scrollpixels fall-green scroll1 scroll-count scroll-pixels
-    #randompixels random1 random-count
-do-until-end
-
-reset
-
 define 	random-count 500
 define 	theater-chase-time 100.0
 define	colorfade-iter 60
@@ -138,29 +110,6 @@ eval color77turkey [yellow,orange_rust,yellow,orange_rust,yellow,orange_rust,yel
 # Runs until 10:45pm
 brightness default-bright
 do-until 22:45:00
-<<<<<<< Updated upstream
-	colorfade orange fall-green color-fade-speed colorfade-iter
-	colorfade fall-green orange color-fade-speed colorfade-iter
-    color77 color77turkey 200.0 100
-    # sinewave sinewave_wait sinewave_iter
-    colorwipe yellow wait1
-    colorwipe orange-brown wait1
-    colorwipe yellow-gold wait1
-    colorwipe fall-green wait1
-    colorwipe fall-red wait1
-    colorwipe green-blue wait1
-    #rainbow 21.0 2
-    #rainbowcycle 19.0 4
-    theaterchase2 yellow orange theater-chase-time 20
-    theaterchase yellow theater-chase-time 20
-    theaterchase orange theater-chase-time 20
-    theaterchase fall-green theater-chase-time 20
-    theaterchase2 fall-green yellow theater-chase-time 20
-    #theaterchaserainbow theater-chase-time
-    scrollpixels orange scroll1 scroll-count scroll-pixels
-    scrollpixels fall-green scroll1 scroll-count scroll-pixels
-    #randompixels random1 random-count
-=======
     select-one
 	    colorfade orange fall-green color-fade-speed colorfade-iter
 	    colorfade fall-green orange color-fade-speed colorfade-iter
@@ -184,7 +133,6 @@ do-until 22:45:00
         scrollpixels fall-green scroll1 scroll-count scroll-pixels
         #randompixels random1 random-count
     select-one-end
->>>>>>> Stashed changes
 do-until-end
 
 reset
